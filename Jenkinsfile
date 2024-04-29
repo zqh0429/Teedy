@@ -11,6 +11,16 @@ pipeline {
                 sh 'mvn pmd:pmd'
             }
         }
+        stage('test') {
+            steps {
+                sh 'mvn test --fail-never'
+            }
+        }
+        stage('doc') {
+            steps {
+                sh 'mvn javadoc:javadoc --fail-never'
+            }
+        }
     }
 
     post {
