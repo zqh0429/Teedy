@@ -1,7 +1,6 @@
 #Using a custom image that already includes Ubuntu and Jetty 9.4.36.
 FROM sismics/ubuntu-jetty:9.4.36
- #Using the LABEL instruction to add metadata to the image,sets the maintainer's 
-email #address for the image
+ #Using the LABEL instruction to add metadata to the image,sets the maintainer's email #address for the image
 LABEL maintainer="b.gamard@sismics.com"
  # update the package list, install various packages,
  # clean up unnecessary files after installation to reduce the size of the image.
